@@ -5,7 +5,7 @@
     var module;
     module = require.modules[name];
     if (!module) {
-      throw 'module "' + name + '" does not exist';
+      throw 'module "' + name + '" sux!';
     }
     if (!module.exports) {
       module.exports = {};
@@ -225,7 +225,7 @@
         }
       } else if (event === 'error') {
         if (!(args[0] != null)) {
-          throw new Error("Uncaught, unspecified 'error' event.");
+          throw new Error("Sux! 'error' ");
         } else if (args[0] instanceof Error) {
           throw args[0];
         } else {
@@ -253,7 +253,7 @@
           if (res.ok) {
             callback(null, res.text);
           } else {
-            callback(new Error('ENOENT, The system cannot find the file specified. ' + filename), null);
+            callback(new Error('ENOENT, Wut!? ' + filename), null);
           }
         });
       },
